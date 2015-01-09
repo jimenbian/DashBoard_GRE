@@ -33,8 +33,47 @@ var dic=[
   "buffoonery:幽默滑稽",
   "penetrate:渗透",
   "perpetrate:做坏事",
-  "perpetuate:保持，长久"
-  
+  "perpetuate:保持，长久",
+  "nostalgia:回忆",
+  "reminiscence:回忆",
+  "oblivion:遗忘",
+  "prospect:前景",
+  "retrospect:回顾",
+  "gratitude:感谢",
+  "ingratitude:忘恩负义",
+  "gratify:是满足高兴",
+  "gratuity:赠物",
+  "gratis:免费得",
+  "gratuitous:无缘无故",
+  "ingrained:根深蒂固",
+  "grate:磨碎，难受",
+  "axiomatic:明显",
+  "self-evident:明显",
+  "enervate:耗干",
+  "drain:人才流失",
+  "plethora:过量",
+  "torrid:酷热",
+  "turbid:浑浊的",
+  "turbulent:浮夸",
+  "turgid:浮夸的",
+  "circumspect:限制",
+  "circumscribe:限制",
+  "profuse:大量",
+  "defuse:缓和",
+  "egalitarian:平等主义",
+  "ephemeral:朝生暮死",
+  "iconoclastic:偶像破坏者",
+  "mercurial:雄辩机智的",
+  "upheavals:举动，大变动",
+  "transcends:超出",
+  "proposition:论点",
+  "coherent:调理清楚",
+  "bearing:举止，方位",
+  "embody:体现",
+  "topple:使塌陷",
+  "indignation:愤怒",
+  "derision:嘲弄",
+  "relegate:使降级"
   
   
 ]
@@ -158,10 +197,28 @@ function myClickHandler2(event)
     var textAreaToChange = document.getElementById("textarea");	// 替换为文本区的 ID
     
     
-    textAreaToChange.value=dic[i].split(":")[0]+'\n'+'\n'+dic[i].split(":")[1];
+    
     if(i<length-1)
     {i=i+1;}
     else{
     i=0
     }
+    textAreaToChange.value=dic[i].split(":")[0]+'\n'+'\n'+dic[i].split(":")[1];
+}
+
+
+function myClickHandler(event)
+{
+    // 将代码插入这里
+     var textAreaToChange = document.getElementById("textarea");	// 替换为文本区的 ID
+    
+    
+    
+    if(i!=0)
+    {i=i-1;}
+    else{
+    i=length-1;
+    }
+    textAreaToChange.value=dic[i].split(":")[0]+'\n'+'\n'+dic[i].split(":")[1];
+    
 }
